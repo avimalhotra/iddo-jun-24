@@ -62,8 +62,28 @@ header nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px
 .btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff);}
 
 
+.banner{ background: #666; padding: 200px 0;}
+.banner button{ font-size: 10rem; background: none; border: none; color: #fff; margin-right: 40px; }
+.banner p{ color: #fff; font-size: 60px; font-weight: 100;}
+.banner a{ color: var(--red);}
+
+
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
+.feature{}
+.feature .circle{ width: 100px; border: 2px solid; aspect-ratio: 1/1; display: grid; place-items: center; border-radius: 50%; font-size: 36px; margin-right: 2rem;}
+.feature h3{ font-size: 16px; margin-bottom: 10px;}
+.feature p{ font-weight: 100; font-size: 14px; line-height: 22px;}
+.gap-y{ row-gap: 4rem;}
+
+
+.wrap-4{ background: #fff; color: var(--red); font-size: 36px; text-align: center; line-height: 10rem;}
+
+
+
 @media screen and ( width<=1220px){
     html{ font-size: 13px;}
+    h2{ font-size: 60px; margin-bottom: 2rem;}
 }
 
 @media screen and ( width<=980px){
@@ -79,6 +99,8 @@ header nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px
 .col-t-10{ flex-basis: 83.33%; max-width: 83.33%; }
 .col-t-11{ flex-basis: 91.66%; max-width: 91.66%; }
 .col-t-12{ flex-basis: 100%; max-width: 100%; }
+.banner p{ font-size: 35px;}
+.banner .flex{ flex-direction: column; }
 }
 
 @media screen and ( width<=767px){
