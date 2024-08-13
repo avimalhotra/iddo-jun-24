@@ -11,8 +11,9 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-2"><h1><a href="">IDDO</a></h1></div>
-                <div class="col-10">
+                <div class="col-2 col-m-6"><h1><a href="">IDDO</a></h1></div>
+                <div class="col-10 col-m-6">
+                    <button class="btn menu"><span></span><span></span><span></span></button>
                     <div class="collapse">
                         <div class="flex justify-space-bet align-item-center">
                             <nav>
@@ -24,7 +25,7 @@
                                     <li><a href="#contact">Contact</a></li>
                                 </ul>
                             </nav>
-                            <button class="btn">Sign Up</button>
+                            <button class="btn signup">Sign Up</button>
                         </div>
                     </div>
                 </div>
@@ -131,7 +132,7 @@
             </div>
             <div class="row">
                 <div class="col-4 col-t-6 col-p-12">
-                    <div class="portfolio">
+                    <div class="portfolio web">
                         <img src="img/portfolio.webp" alt="portfolio" width="370" height="370" loading="lazy" class="img-resp">
                         <div class="caption">
                             <h3>Project Name</h3>
@@ -140,7 +141,7 @@
                     </div>
                 </div>
                 <div class="col-4 col-t-6 col-p-12">
-                    <div class="portfolio">
+                    <div class="portfolio web">
                         <img src="img/portfolio.webp" alt="portfolio" width="370" height="370" loading="lazy" class="img-resp">
                         <div class="caption">
                             <h3>Project Name</h3>
@@ -149,7 +150,7 @@
                     </div>
                 </div>
                 <div class="col-4 col-t-6 col-p-12">
-                    <div class="portfolio">
+                    <div class="portfolio web">
                         <img src="img/portfolio.webp" alt="portfolio" width="370" height="370" loading="lazy" class="img-resp">
                         <div class="caption">
                             <h3>Project Name</h3>
@@ -158,7 +159,7 @@
                     </div>
                 </div>
                 <div class="col-4 col-t-6 col-p-12">
-                    <div class="portfolio">
+                    <div class="portfolio branding">
                         <img src="img/portfolio.webp" alt="portfolio" width="370" height="370" loading="lazy" class="img-resp">
                         <div class="caption">
                             <h3>Project Name</h3>
@@ -167,7 +168,7 @@
                     </div>
                 </div>
                 <div class="col-4 col-t-6 col-p-12">
-                    <div class="portfolio">
+                    <div class="portfolio branding">
                         <img src="img/portfolio.webp" alt="portfolio" width="370" height="370" loading="lazy" class="img-resp">
                         <div class="caption">
                             <h3>Project Name</h3>
@@ -176,7 +177,7 @@
                     </div>
                 </div>
                 <div class="col-4 col-t-6 col-p-12">
-                    <div class="portfolio">
+                    <div class="portfolio branding">
                         <img src="img/portfolio.webp" alt="portfolio" width="370" height="370" loading="lazy" class="img-resp">
                         <div class="caption">
                             <h3>Project Name</h3>
@@ -417,6 +418,85 @@
             <p>Designed by  Author</p>
             <button class="top"><span class="fa fa-chevron-up"></span></button>
         </div>
-    </footer>      
+    </footer>    
+
+<div class="hiddenform" hidden>
+    <form method="post">
+        <div class="m10"><label>Name: <input type="text" required></label></div>
+        <div class="m10"><label>Email: <input type="email" required></label></div>
+        <div class="m10"><label>Phone: <input type="tel" required></label></div>
+        <div class="m10"><button class="btn">Sign up</button></div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+    $("#portfolio .btn").click(function(){
+        $("#portfolio .btn").removeClass("active");
+        $(this).addClass("active");
+       
+        
+        if( $(this).text()=="All" ){
+            $("#portfolio .portfolio").fadeIn();
+        }
+        else if( $(this).text()=="Website" ){
+            $("#portfolio .portfolio").fadeOut(0);
+            $("#portfolio .web").fadeIn();
+        }
+        else if( $(this).text()=="Branding" ){
+            $("#portfolio .portfolio").fadeOut(0);
+            $("#portfolio .branding").fadeIn();
+        }
+
+    });
+
+
+    $(".accordion a").click(function(e){
+        e.preventDefault();
+
+        if( $(this).hasClass("active")==false ){
+            $(".accordion a").removeClass("active");
+            $(this).addClass("active");
+            $(".accordion p").slideUp();
+            $(this).next("p").slideDown();
+           
+        }
+        // else{
+        //     $(".accordion a").removeClass("active");
+        //     $(".accordion p").slideUp();
+        // }
+    });
+
+    $(".top").click(function(){
+        
+        $("html,body").animate({scrollTop:0});
+    })
+
+    $("header .menu").click(function(){
+        $(".collapse").slideToggle();
+        $(this).toggleClass("active");
+    });
+
+    if(screen.width<768){
+        $(".collapse a").click(function(){
+             $(".collapse").slideUp();
+             $("header .menu").removeClass("active");
+        })
+    }
+
+    $(".signup").click(function(){
+        $("body").append(`<div class="overlay"></div>`);
+        $("body").append(`<div class="popup"></div>`);
+        $(".popup").append($(".hiddenform").html());
+
+        $(window).keyup(function(e){
+            if(e.which==27){
+                $(".overlay, .popup").remove();
+            }
+        })
+    });
+
+});  
+</script>
 </body>
 </html>

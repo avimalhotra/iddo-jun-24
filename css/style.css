@@ -62,6 +62,12 @@ header nav{ margin-left: -20px; }
 header li{ margin: 0 5px; }
 header nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px; }
 .btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff);}
+.menu{ display: none;}
+.menu span{ height: 2px; display: block; background: var(--red); margin: 6px 12px; transition: .5s; transform-origin: right center;}
+.menu.active span:nth-child(1){ transform: rotate(-15deg); }
+.menu.active span:nth-child(2){ opacity: 0; }
+.menu.active span:nth-child(3){ transform: rotate(15deg); }
+
 
 
 .banner{ background: #666; padding: 200px 0;}
@@ -83,7 +89,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 
 .wrap-5{ background: #ebebeb; color: #363636; padding: 100px 0;}
 .wrap-5 .btn{ margin:0 10px 2rem 0;}
-.btn.active{ background: var(--red); color: #fff; border-color: var(--red); }
+.wrap-5 .btn.active{ background: var(--red); color: #fff; border-color: var(--red); }
 .portfolio{ position: relative; margin-top: 2rem; overflow: hidden;}
 .caption{ position: absolute; left: 0; right: 0; bottom: -100px; background: #fff; opacity: 0; text-align: center; padding: 20px 0; transition: .4s;}
 .portfolio:hover .caption{ opacity: 1; bottom: 0;}
@@ -159,6 +165,10 @@ canvas{ width: 100%; background: #ccc; margin-top: 50px; }
 .wrap-13{ background: #252525; color: #ccc; text-align: center; padding: 50px 0; }
 .top{ background: none; border: none; font-size: 36px; color: var(--red);}
 
+.overlay{ background: #000b; position: fixed; inset: 0; z-index: 10; }
+.popup{ background: #fff; position: fixed; z-index: 11; padding: 10px; left: 50%; top: 100px; transform: translateX(-50%); width: 320px; }
+.m10{ margin: 10px 0;}
+
 
 @media screen and ( width<=1220px){
     html{ font-size: 13px;}
@@ -193,6 +203,11 @@ canvas{ width: 100%; background: #ccc; margin-top: 50px; }
     .collapse{ display: none;}
     .wrap-5 .btn{ margin-right: 6px;}
     .col-t-auto{ flex-basis: 33.33%; max-width: 50%; }
+    .col-m-6{ flex-basis: 50%; max-width: 50%; }
+    .menu{ display: inline-block; position: absolute; right: 1rem; top: 2rem;}
+    .collapse{ position: absolute; left: 0; right: 0; top: 80px; background: #000; padding: 1rem; text-align: right;}
+    .collapse .flex{ display: block;}
+    header nav a{ line-height: 40px;}
 }
 
 @media screen and ( width<=460px){
