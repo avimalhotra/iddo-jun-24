@@ -70,7 +70,7 @@ header nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px
 
 
 
-.banner{ background: #666; padding: 200px 0;}
+.banner{ background: #666; padding: 250px 0;}
 .banner button{ font-size: 10rem; background: none; border: none; color: #fff; margin-right: 40px; }
 .banner p{ color: #fff; font-size: 60px; font-weight: 100;}
 .banner a{ color: var(--red);}
@@ -99,15 +99,20 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 
 
 .wrap-6{ background: #666; color: #fff; padding: 4rem 0 2rem; text-align: center;}
-.wrap-6 blockquote{ display: none; }
-.wrap-6 blockquote:first-child{ display:block; }
+/* .wrap-6 blockquote{ display: none; }
+.wrap-6 blockquote:first-child{ display:block; } */
 .wrap-6 blockquote q{  font: 100 36px/41px var(--ff);  }
-.wrap-6 blockquote img{ margin: 10px 0;}
+.wrap-6 blockquote img{ margin: 10px auto;}
 .wrap-6 blockquote figcaption{ font-size: 16px; font-weight: bold;}
-.wrap-6 .pager{ display: flex; justify-content: center; margin-top: 20px;}
+/* .wrap-6 .pager{ display: flex; justify-content: center; margin-top: 20px;}
 .wrap-6 .pager li{ margin: 5px;}
 .wrap-6 .pager li a{ display: block; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%;}
-.wrap-6 .pager li a.active{ background: #fff;}
+.wrap-6 .pager li a.active{ background: #fff;} */
+.wrap-6 .bx-wrapper{ background: none; border: none; box-shadow: 0 0;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:focus,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:hover{ background: #fff; }
+
+
 
 .wrap-7{ background: #fff; color: #363636; padding: 100px 0;}
 .team{ position: relative; margin-top: 50px;}
@@ -166,8 +171,10 @@ canvas{ width: 100%; background: #ccc; margin-top: 50px; }
 .top{ background: none; border: none; font-size: 36px; color: var(--red);}
 
 .overlay{ background: #000b; position: fixed; inset: 0; z-index: 10; }
-.popup{ background: #fff; position: fixed; z-index: 11; padding: 10px; left: 50%; top: 100px; transform: translateX(-50%); width: 320px; }
+.popup{ background: #fff; position: fixed; z-index: 11; padding: 15px; left: 50%; top: 100px; transform: translateX(-50%); width: 300px; }
 .m10{ margin: 10px 0;}
+.popup input{ float: right;}
+.cross{ border: none; padding: 0; background: none; color: var(--red); font-size: 20px; position: absolute; right: 3px; top: 3px;}
 
 
 @media screen and ( width<=1220px){
