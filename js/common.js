@@ -1,4 +1,3 @@
-AOS.init();
 
     $(function(){
         $("#portfolio .btn").click(function(){

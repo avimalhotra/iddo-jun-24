@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDDO</title>
+
+    <title>IDDO | Single Page Website using CSS 12 Grid Flexbox </title>
+    <meta name="description" content="IDDO is a Single Page Website build using CSS 12 Grid and Flexbox with responsive and jQuery">
+
+    <link rel="icon" href="img/jack-efron.webp">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body id="home">
     <header>
@@ -38,7 +42,7 @@
         <div class="container">
             <div class="flex align-item-center">
                 <div>
-                    <button><span class="fa fa-play-circle-o"></span></button>
+                    <button aria-label="Play Video"><span class="fa fa-play-circle-o"></span></button>
                 </div>
                 <div>
                     <p>Let me show you a few things</p>
@@ -188,7 +192,7 @@
                     </div>
                 </div>
             </div>
-            <button class="seemore"><span class="fa fa-plus-circle"></span></button>
+            <button class="seemore" aria-label="see more"><span class="fa fa-plus-circle"></span></button>
         </div>
     </section>
     <div class="wrap-6">
@@ -199,24 +203,24 @@
                     <div class="slider">
                         <blockquote>
                             <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates maiores aperiam assumenda quibusdam </q>
-                            <footer>
+                            <figure>
                                 <img src="img/jack-efron.webp" alt="JACK EFRON" width="70" height="70" loading="lazy">
                                 <figcaption>JACK EFRON</figcaption>
-                            </footer>
+                            </figure>
                         </blockquote>
                         <blockquote>
                             <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates maiores aperiam assumenda quibusdam non erfdcrewf</q>
-                            <footer>
+                            <figure>
                                 <img src="img/jack-efron.webp" alt="JACK EFRON" width="70" height="70" loading="lazy">
                                 <figcaption>JACK EFRON</figcaption>
-                            </footer>
+                            </figure>
                         </blockquote>
                         <blockquote>
                             <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates maiores aperiam assumenda quibusdam non w3erd f dferfd?</q>
-                            <footer>
+                            <figure>
                                 <img src="img/jack-efron.webp" alt="JACK EFRON" width="70" height="70" loading="lazy">
                                 <figcaption>JACK EFRON</figcaption>
-                            </footer>
+                            </figure>
                         </blockquote>
                     </div>
                     <!-- <ul class="pager">
@@ -240,9 +244,9 @@
                     <div class="team">
                         <img src="img/michael.webp" alt="michael" width="170" height="170" loading="lazy">
                         <ul class="social">
-                            <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                            <li><a href=""><span class="fa fa-facebook"></span></a></li>
-                            <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                            <li><a aria-label="Twitter" href=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a aria-label="Facebook" href=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a aria-label="Instagram" href=""><span class="fa fa-instagram"></span></a></li>
                         </ul>
                         <div class="gap">
                             <h3>MICHAEL JOE</h3>
@@ -256,9 +260,9 @@
                     <div class="team">
                         <img src="img/michael.webp" alt="michael" width="170" height="170" loading="lazy">
                         <ul class="social">
-                            <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                            <li><a href=""><span class="fa fa-facebook"></span></a></li>
-                            <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                            <li><a aria-label="Twitter" href=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a aria-label="Facebook" href=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a aria-label="Instagram" href=""><span class="fa fa-instagram"></span></a></li>
                         </ul>
                         <div class="gap">
                             <h3>MICHAEL JOE</h3>
@@ -272,9 +276,9 @@
                     <div class="team">
                         <img src="img/michael.webp" alt="michael" width="170" height="170" loading="lazy">
                         <ul class="social">
-                            <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                            <li><a href=""><span class="fa fa-facebook"></span></a></li>
-                            <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                            <li><a aria-label="Twitter" href=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a aria-label="Facebook" href=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a aria-label="Instagram" href=""><span class="fa fa-instagram"></span></a></li>
                         </ul>
                         <div class="gap">
                             <h3>MICHAEL JOE</h3>
@@ -285,7 +289,7 @@
                     </div>
                 </div>
             </div>
-            <button class="seemore"><span class="fa fa-plus-circle"></span></button>
+            <button class="seemore" aria-label="see more"><span class="fa fa-plus-circle"></span></button>
         </div>
     </section>
     <div class="wrap-8">
@@ -396,12 +400,12 @@
                     <h2>CONTACT US.</h2>
                     <address>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, odit.</address>
                     <ul class="soc2">
-                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a aria-label="Social" href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a aria-label="Social" href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a aria-label="Social" href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a aria-label="Social" href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a aria-label="Social" href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a aria-label="Social" href=""><span class="fa fa-twitter"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -420,7 +424,7 @@
             <h3>IDDO</h3>
             <p>&copy; 2024</p>
             <p>Designed by  Author</p>
-            <button class="top"><span class="fa fa-chevron-up"></span></button>
+            <button aria-label="go to Top" class="top"><span class="fa fa-chevron-up"></span></button>
         </div>
     </footer>    
 <div class="hiddenform" hidden>
@@ -434,7 +438,6 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
